@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=touring;host=localhost';
+$dsn = 'mysql:dbname=bike_sns_php;host=localhost';
 $user = 'root';
 $password = 'root';
 
@@ -30,5 +30,3 @@ $dbh = null;
 
 ?>
 
-</body>
-</html>
