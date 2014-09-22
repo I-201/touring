@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $link = mysql_connect('localhost', 'dbuser', 'dbuser');
 
 if (!$link) {
@@ -35,10 +38,15 @@ while ($row = mysql_fetch_assoc($result)) {
 
 
 	if ($_POST['id']===$row['id'] && $_POST['pass']===$row['password']) {
-		 //    print("id=".$row['id']);
-		 //    print(" pass=".$row['password']);
+		    // print("id=".$row['id']);
+		    // print(" pass=".$row['password']);
+
+		    $_SESSION['id'] = $row['id'];
+		    // print("session['id']= ".$_SESSION['id']);
+
 		header("HTTP/1.1 301 Moved Permanently");
-		header("Location: http://localhost/touring/touring_1.html");
+		header("Location: http://localhost/touring/touring_1.php");
+		exit();
 	}
 
 }
