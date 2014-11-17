@@ -42,6 +42,11 @@ while ($row = mysql_fetch_assoc($result)) {
 		    // print(" pass=".$row['password']);
 
 		    $_SESSION['id'] = $row['id'];
+		    $_SESSION['name'] = $row['name'];
+		    $_SESSION['email'] = $row['email'];
+		    $_SESSION['pass'] = $row['password'];
+		    $_SESSION['created'] = $row['created'];
+
 		    // print("session['id']= ".$_SESSION['id']);
 
 		header("HTTP/1.1 301 Moved Permanently");
